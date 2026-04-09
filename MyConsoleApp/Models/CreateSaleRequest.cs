@@ -1,0 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace MyConsoleApp.Models;
+
+public class CreateSaleRequest
+{
+    [Required]
+    public Guid MedicineId { get; set; }
+
+    [Range(1, int.MaxValue)]
+    public int QuantitySold { get; set; }
+}

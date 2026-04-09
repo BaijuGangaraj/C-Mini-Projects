@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABC Pharmacy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>ABC Pharmacy Medicine Tracker</h1>
+
+    <section class="card">
+      <h2>Search Medicines</h2>
+      <input id="searchInput" type="text" placeholder="Search by medicine name..." />
+    </section>
+
+    <section class="card">
+      <h2>Medicines</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Brand</th>
+            <th>Expiry Date</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="medicineTableBody"></tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Add Medicine</h2>
+      <form id="medicineForm">
+        <input name="fullName" placeholder="Full Name" required />
+        <input name="brand" placeholder="Brand" required />
+        <input name="notes" placeholder="Notes" />
+        <input name="expiryDate" type="date" required />
+        <input name="quantity" type="number" min="0" placeholder="Quantity" required />
+        <input name="price" type="number" min="0" step="0.01" placeholder="Price" required />
+        <button type="submit">Add Medicine</button>
+      </form>
+      <p id="medicineMessage" class="message"></p>
+    </section>
+
+    <section class="card">
+      <h2>Record Sale</h2>
+      <form id="saleForm">
+        <select id="saleMedicineId" required></select>
+        <input id="saleQuantity" type="number" min="1" placeholder="Quantity Sold" required />
+        <button type="submit">Record Sale</button>
+      </form>
+      <p id="saleMessage" class="message"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
